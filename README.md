@@ -1,11 +1,14 @@
 # spaceX_missions
 Simple React app using SpaceX Launches API, React, react router, chkra ui and react icons.
 
-
 Home page:
-![home](https://user-images.githubusercontent.com/84020433/168510614-8504ece1-c2db-4356-83eb-1388d7eb8077.JPG)
+
+
+![home](https://user-images.githubusercontent.com/84020433/168726321-42a25798-7938-4471-85b3-0b74ad889438.JPG)
 
 Details page:
-![Details](https://user-images.githubusercontent.com/84020433/168510619-388dc00a-8824-4cf9-af99-854319a9b873.JPG)
+
+
+![details](https://user-images.githubusercontent.com/84020433/168726344-e867a2ab-8bcc-4866-bb12-c6a5b804920f.JPG)
 
 Still under development and improvement...
