@@ -1,7 +1,8 @@
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import * as API from '../services/launches'
-import { Box, Text, Flex, Spacer, Tag, Icon } from '@chakra-ui/react'
+import { Box, Text, Flex, Spacer, Tag } from '@chakra-ui/react'
+import { Progress } from '@chakra-ui/react'
 
 export function LaunchDetails() {
 
@@ -13,14 +14,13 @@ export function LaunchDetails() {
         }, [launchId]);
 
   return (
+      
     <Box 
     bg="gray.100" 
     p={4} 
     m={4}
     borderRadius="lg">
-    {!launch ? 
-        (<div>Loading...</div>)
-        : (
+    {launch ? (
         <>
             <Flex>
                 <Text fontSize="2xl">
@@ -37,13 +37,16 @@ export function LaunchDetails() {
                 </Text>
             </Box>
             <Box fontSize="sm" color="purple">
-                Rocket: {" "}
+                Rocket Details: {" "}
                 <Link to={`/rockets/${launch.rocket?.rocket_id}`}>
                     {launch.rocket?.rocket_name}
                 </Link>
             </Box>
         </>
-     )}
+     )
+     :
+        <Progress size='xs' isIndeterminate color='purple.300'/>
+     }
     </Box>
     );
 }

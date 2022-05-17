@@ -1,6 +1,6 @@
 import logo from './assets/logo_spacex.jpg'
 import { Image } from '@chakra-ui/react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import { LaunchDetails } from './components/LaunchDetails'
 import { LaunchList } from './components/LaunchList'
 import {  RocketDetails} from './components/RocketDetails'
@@ -10,7 +10,11 @@ export function App() {
 
   return (
     <>
-      <Image m={4} src={logo}  alt="SpaceX" />
+      <Link to='/'>
+        <header className="header-container">
+          <Image src="https://logosmarcas.net/wp-content/uploads/2020/09/SpaceX-Simbolo.jpg"  alt="SpaceX" />
+        </header>
+      </Link>
       <Routes>
         <Route path="/" element={<LaunchList />} />
         <Route path="launch/:launchId" element={<LaunchDetails />} />
